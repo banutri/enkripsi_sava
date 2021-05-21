@@ -176,7 +176,7 @@
               <Color blue="0" green="ff" red="33" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ilham/UI/unlocked.png"/>
+              <Image iconType="3" name="/ilham/UI/new_unlock.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Decrypt"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -206,7 +206,7 @@
               <Color blue="0" green="ff" red="33" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ilham/UI/locked.png"/>
+              <Image iconType="3" name="/ilham/UI/new_lock.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Encrypt"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

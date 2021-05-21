@@ -120,7 +120,7 @@ public class EncUI extends javax.swing.JFrame {
 
         decButton.setBackground(new java.awt.Color(0, 0, 0));
         decButton.setForeground(new java.awt.Color(51, 255, 0));
-        decButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/unlocked.png"))); // NOI18N
+        decButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/new_unlock.png"))); // NOI18N
         decButton.setText("Decrypt");
         decButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         decButton.setMaximumSize(new java.awt.Dimension(69, 23));
@@ -133,7 +133,7 @@ public class EncUI extends javax.swing.JFrame {
 
         encButton.setBackground(new java.awt.Color(0, 0, 0));
         encButton.setForeground(new java.awt.Color(51, 255, 0));
-        encButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/locked.png"))); // NOI18N
+        encButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/new_lock.png"))); // NOI18N
         encButton.setText("Encrypt");
         encButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         encButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
