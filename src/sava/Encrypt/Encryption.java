@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ilham.Encrypt;
+package sava.Encrypt;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,7 +24,7 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class Encryption {
 
-   static ilham.Fileman.fileman fio;
+   static sava.Fileman.fileman fio;
     private static final String ALG = "AES";
     private static final String CIPH = "AES/CBC/PKCS5Padding";
     private static final String KEYFAC = "PBKDF2WithHmacSHA1";

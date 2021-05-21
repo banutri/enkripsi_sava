@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ilham.UI;
+package sava.UI;
 
 //Class Imports
-import ilham.Encrypt.Decryption;
-import ilham.Encrypt.Encryption;
-import ilham.Encrypt.RSAUtils;
-import ilham.Fileman.fileman;
+import sava.Encrypt.Decryption;
+import sava.Encrypt.Encryption;
+import sava.Encrypt.RSAUtils;
+import sava.Fileman.fileman;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 
@@ -58,7 +58,7 @@ import javax.swing.JPasswordField;
 @SuppressWarnings("serial")
 public class EncUI extends javax.swing.JFrame {
 
-    static ilham.Fileman.fileman fio = new fileman();
+    static sava.Fileman.fileman fio = new fileman();
    
     
     /**
@@ -115,12 +115,12 @@ public class EncUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         encryptPanel.setBackground(new java.awt.Color(0, 0, 0));
-        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi AES dan RSA", 0, 0, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 255, 0))); // NOI18N
+        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi AES dan RSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 255, 0))); // NOI18N
         encryptPanel.setForeground(new java.awt.Color(0, 255, 0));
 
         decButton.setBackground(new java.awt.Color(0, 0, 0));
         decButton.setForeground(new java.awt.Color(51, 255, 0));
-        decButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/new_unlock.png"))); // NOI18N
+        decButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/new_unlock.png"))); // NOI18N
         decButton.setText("Decrypt");
         decButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         decButton.setMaximumSize(new java.awt.Dimension(69, 23));
@@ -133,7 +133,7 @@ public class EncUI extends javax.swing.JFrame {
 
         encButton.setBackground(new java.awt.Color(0, 0, 0));
         encButton.setForeground(new java.awt.Color(51, 255, 0));
-        encButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/new_lock.png"))); // NOI18N
+        encButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/new_lock.png"))); // NOI18N
         encButton.setText("Encrypt");
         encButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         encButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -161,7 +161,7 @@ public class EncUI extends javax.swing.JFrame {
 
         fcBtn.setBackground(new java.awt.Color(0, 0, 0));
         fcBtn.setForeground(new java.awt.Color(0, 255, 0));
-        fcBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/browse.jpg"))); // NOI18N
+        fcBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/browse.jpg"))); // NOI18N
         fcBtn.setText("....");
         fcBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         fcBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class EncUI extends javax.swing.JFrame {
 
         exitBtn.setBackground(new java.awt.Color(0, 0, 0));
         exitBtn.setForeground(new java.awt.Color(0, 255, 0));
-        exitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ilham/UI/close.png"))); // NOI18N
+        exitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/close.png"))); // NOI18N
         exitBtn.setText("Exit");
         exitBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         exitBtn.addActionListener(new java.awt.event.ActionListener() {
