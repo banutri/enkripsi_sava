@@ -93,7 +93,7 @@ public class fileman {
      */
     public boolean isEncrypted(File file) {
         
-       return file.getName().endsWith("aes");
+       return file.getName().endsWith("sav");
     }
 
     /**
@@ -105,7 +105,7 @@ public class fileman {
      * object has an "aes" suffix or False if it does not.
      */
     public boolean isEncrypted(Path path) {
-        return path.endsWith("aes");
+        return path.endsWith("sav");
     }
     public boolean isValidFile(Path path){
         return (Files.exists(path) && !Files.isDirectory(path));

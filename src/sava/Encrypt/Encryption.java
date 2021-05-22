@@ -49,7 +49,7 @@ public class Encryption {
                 // file to be encrypted as input stream
                 FileInputStream inFile = new FileInputStream(file)) {
             // output file stream
-            outFile = new FileOutputStream(file + ".aes");
+            outFile = new FileOutputStream(file + ".sav");
 
             
             
@@ -99,7 +99,7 @@ public class Encryption {
 
         
 
-        return file + ".aes";
+        return file + ".sav";
 
     }
 

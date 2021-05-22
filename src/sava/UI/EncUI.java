@@ -146,7 +146,7 @@ public class EncUI extends javax.swing.JFrame {
         fileNameLbl.setBackground(new java.awt.Color(0, 0, 0));
         fileNameLbl.setForeground(new java.awt.Color(51, 255, 0));
         fileNameLbl.setLabelFor(fileTextField);
-        fileNameLbl.setText("Filename:");
+        fileNameLbl.setText("File ");
 
         fileTextField.setBackground(new java.awt.Color(0, 0, 0));
         fileTextField.setForeground(new java.awt.Color(51, 255, 0));
@@ -161,7 +161,7 @@ public class EncUI extends javax.swing.JFrame {
 
         fcBtn.setBackground(new java.awt.Color(0, 0, 0));
         fcBtn.setForeground(new java.awt.Color(0, 255, 0));
-        fcBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/browse.jpg"))); // NOI18N
+        fcBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/browse.png"))); // NOI18N
         fcBtn.setText("....");
         fcBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         fcBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +173,7 @@ public class EncUI extends javax.swing.JFrame {
         exitBtn.setBackground(new java.awt.Color(0, 0, 0));
         exitBtn.setForeground(new java.awt.Color(0, 255, 0));
         exitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/close.png"))); // NOI18N
-        exitBtn.setText("Exit");
+        exitBtn.setText("Keluar");
         exitBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         exitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,7 +205,7 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
-        jLabel2.setText("millisecond.");
+        jLabel2.setText("Waktu");
 
         javax.swing.GroupLayout encryptPanelLayout = new javax.swing.GroupLayout(encryptPanel);
         encryptPanel.setLayout(encryptPanelLayout);
