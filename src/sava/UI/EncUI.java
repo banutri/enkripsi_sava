@@ -299,16 +299,16 @@ public class EncUI extends javax.swing.JFrame {
                 decButton.setEnabled(false);
                 fio.setDecFile(file);
             }
-            infoTextArea.append("\nFile Selected:  " + file.getName());
+            infoTextArea.append("\nFile dipilih:  " + file.getName());
             fileTextField.setText(file.getAbsolutePath());
         }else{
-            infoTextArea.append("\nFile Selection Cancelled");
+            infoTextArea.append("\nBatal pilih file");
         }
     }//GEN-LAST:event_fcBtnActionPerformed
 
     private void fileTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileTextFieldActionPerformed
         Path path = Paths.get(fileTextField.getText()).toAbsolutePath();
-        infoTextArea.append("\n Selected FIle Path:"+path.toString());
+        infoTextArea.append("\n File path:"+path.toString());
         if (Files.exists(path)) {
             if (fio.isEncrypted(path)) {
                 encButton.setEnabled(false);
@@ -318,7 +318,7 @@ public class EncUI extends javax.swing.JFrame {
                 fio.setDecFile(path);
             }
         } else {
-            infoTextArea.append("***Error:  File cannot be found, please check that the correct location was entered. ***");
+            infoTextArea.append("***Error:  File tidak ditemukan, mohon periksa kembali lokasi file. ***");
         }
     }//GEN-LAST:event_fileTextFieldActionPerformed
 
