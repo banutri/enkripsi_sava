@@ -114,7 +114,7 @@ public class EncUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         encryptPanel.setBackground(new java.awt.Color(0, 0, 0));
-        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi Caesar Chiper, AES dan RSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(0, 255, 0))); // NOI18N
+        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi AES dan RSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 255, 0))); // NOI18N
         encryptPanel.setForeground(new java.awt.Color(0, 255, 0));
 
         decButton.setBackground(new java.awt.Color(0, 0, 0));
@@ -204,7 +204,7 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
-        jLabel2.setText("Waktu");
+        jLabel2.setText("Waktu (ms)");
 
         javax.swing.GroupLayout encryptPanelLayout = new javax.swing.GroupLayout(encryptPanel);
         encryptPanel.setLayout(encryptPanelLayout);
@@ -286,7 +286,7 @@ public class EncUI extends javax.swing.JFrame {
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         fileTextField.setText("");
         fio.cleanup();
-        JOptionPane.showMessageDialog(null, "Thank you for using EncryptThis!!");
+        JOptionPane.showMessageDialog(null, "Terimakasih!");
         System.exit(0);
 
     }//GEN-LAST:event_exitBtnActionPerformed
@@ -325,8 +325,8 @@ public class EncUI extends javax.swing.JFrame {
     }//GEN-LAST:event_fileTextFieldActionPerformed
 
     private void encButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encButtonActionPerformed
-        String pw="akuini";//getUserPassword();
-        byte[] data = "akuini".getBytes();
+        String pw="savaudinus2016";//getUserPassword();
+        byte[] data = "savaudinus2016".getBytes();
 
         RSAUtils.generateKey("./public.key", "./private.key");
 
@@ -353,24 +353,24 @@ public class EncUI extends javax.swing.JFrame {
         System.out.println("decrypted: " + new String(decrypted));
 
         String output;
-        infoTextArea.append("\nAction Selected:   Encrypt File");
+        infoTextArea.append("\nAction Dipilih:   Encrypt File");
 
         if(!pw.equals("")){
             try {
-                infoTextArea.append("\nEncrypting File...");
+                infoTextArea.append("\nEnkripsi File...");
                 long startTime = System.nanoTime();
                 output = Encryption.encrypt(fio.getDecFile(),pw);
                 long endTime = System.nanoTime();
                 
                 long duration = (endTime - startTime);
                 encryptprocessingtime.setText(String.valueOf(duration / 1000000));
-                infoTextArea.append("\nEncryption Successful");
-                infoTextArea.append("\nOutput File Name:  \n " + output);
+                infoTextArea.append("\nEnkripsi Sukses");
+                infoTextArea.append("\nOutput File :  \n " + output);
             } catch (Exception ex) {
-                infoTextArea.append("\nFile Encryption Failed:  \n" + ex);
+                infoTextArea.append("\nEnkripsi File Gagal:  \n" + ex);
             }
         }else{
-            infoTextArea.append("\nNo Password Entered\nFile Encryption Cancelled");
+            infoTextArea.append("\nTidak Memasukan Password\nEnkripsi File Dibatalkan");
             fileTextField.setText("");
         }
 
@@ -379,26 +379,26 @@ public class EncUI extends javax.swing.JFrame {
 
     private void decButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decButtonActionPerformed
         String output;
-        String pw = "akuini";//getUserPassword();
-        infoTextArea.append("\nAction Selected:    Decrypt File:  " + fio.getEncFile().getName());
+        String pw = "savaudinus2016";//getUserPassword();
+        infoTextArea.append("\nAction Dipilih:    Dekrip File:  " + fio.getEncFile().getName());
         JPasswordField pwd = new JPasswordField(15); //ini untuk memasukkan password yang salah
 
         if(!pw.equals("")){
             try {
-                infoTextArea.append("\nDecrypting File...");
+                infoTextArea.append("\nDekripsi File...");
                 long startTime = System.nanoTime();
                 output = Decryption.decrypt(fio.getEncFile(),pw);
                 long endTime = System.nanoTime();
                 
                 long duration = (endTime - startTime);
                 encryptprocessingtime.setText(String.valueOf(duration / 1000000));
-                infoTextArea.append("\nDecryption Successful");
-                infoTextArea.append("\nOutput File Name:    \n" + output);
+                infoTextArea.append("\nDekripsi Sukses");
+                infoTextArea.append("\nOutput File :    \n" + output);
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "password salah");
-                int action = JOptionPane.showConfirmDialog(null, pwd, "Enter Password", JOptionPane.OK_CANCEL_OPTION);
+                int action = JOptionPane.showConfirmDialog(null, pwd, "Masukan Password", JOptionPane.OK_CANCEL_OPTION);
                 if (action < 0) {
-                    JOptionPane.showMessageDialog(null, "Cancelling ");
+                    JOptionPane.showMessageDialog(null, "Membatalkan ");
                 } else {
                     pw = new String(pwd.getPassword());
                 }
@@ -408,7 +408,7 @@ public class EncUI extends javax.swing.JFrame {
             }
         }else{
 
-            infoTextArea.append("\nFile Decryption Cancelled");
+            infoTextArea.append("\nDekripsi File Dibatalkan");
             fileTextField.setText("");
         }
 
@@ -433,9 +433,9 @@ public class EncUI extends javax.swing.JFrame {
         
         JPasswordField pwd = new JPasswordField(15);
         String pw = "";
-        int action = JOptionPane.showConfirmDialog(null, pwd, "Enter Password", JOptionPane.OK_CANCEL_OPTION);
+        int action = JOptionPane.showConfirmDialog(null, pwd, "Masukan Passowrd", JOptionPane.OK_CANCEL_OPTION);
         if (action < 0) {
-            JOptionPane.showMessageDialog(null, "Cancelling ");
+            JOptionPane.showMessageDialog(null, "Membatalkan ");
         } else {
             pw = new String(pwd.getPassword());
         }
