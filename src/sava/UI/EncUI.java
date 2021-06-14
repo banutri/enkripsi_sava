@@ -6,6 +6,7 @@
 package sava.UI;
 
 //Class Imports
+import java.awt.Color;
 import sava.Encrypt.Decryption;
 import sava.Encrypt.Encryption;
 import sava.Encrypt.RSAUtils;
@@ -49,6 +50,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+
 
 /**
  *
@@ -303,9 +305,12 @@ public class EncUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         fileTextField.setText("");
         fio.cleanup();
+        
         JOptionPane.showMessageDialog(null, "Terimakasih!");
         System.exit(0);
 
