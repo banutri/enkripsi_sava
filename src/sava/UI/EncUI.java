@@ -114,10 +114,11 @@ public class EncUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         encryptPanel.setBackground(new java.awt.Color(0, 0, 0));
-        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi AES dan RSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 255, 0))); // NOI18N
+        encryptPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enkripsi AES dan RSA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(0, 255, 0))); // NOI18N
         encryptPanel.setForeground(new java.awt.Color(0, 255, 0));
 
         decButton.setBackground(new java.awt.Color(0, 0, 0));
+        decButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         decButton.setForeground(new java.awt.Color(51, 255, 0));
         decButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/new_unlock.png"))); // NOI18N
         decButton.setText("Decrypt");
@@ -131,6 +132,7 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         encButton.setBackground(new java.awt.Color(0, 0, 0));
+        encButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         encButton.setForeground(new java.awt.Color(51, 255, 0));
         encButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/new_lock.png"))); // NOI18N
         encButton.setText("Encrypt");
@@ -143,12 +145,15 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         fileNameLbl.setBackground(new java.awt.Color(0, 0, 0));
+        fileNameLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         fileNameLbl.setForeground(new java.awt.Color(51, 255, 0));
         fileNameLbl.setLabelFor(fileTextField);
         fileNameLbl.setText("File ");
 
         fileTextField.setBackground(new java.awt.Color(0, 0, 0));
+        fileTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         fileTextField.setForeground(new java.awt.Color(51, 255, 0));
+        fileTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         fileTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         fileTextField.setSelectedTextColor(new java.awt.Color(0, 0, 0));
         fileTextField.setSelectionColor(new java.awt.Color(0, 255, 0));
@@ -159,6 +164,7 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         fcBtn.setBackground(new java.awt.Color(0, 0, 0));
+        fcBtn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         fcBtn.setForeground(new java.awt.Color(0, 255, 0));
         fcBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/browse.png"))); // NOI18N
         fcBtn.setText("....");
@@ -170,6 +176,7 @@ public class EncUI extends javax.swing.JFrame {
         });
 
         exitBtn.setBackground(new java.awt.Color(0, 0, 0));
+        exitBtn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         exitBtn.setForeground(new java.awt.Color(0, 255, 0));
         exitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sava/UI/close.png"))); // NOI18N
         exitBtn.setText("Keluar");
@@ -180,12 +187,14 @@ public class EncUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 0));
         jLabel1.setText("Status :");
 
         infoTextArea.setEditable(false);
         infoTextArea.setBackground(new java.awt.Color(0, 0, 0));
         infoTextArea.setColumns(20);
+        infoTextArea.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         infoTextArea.setForeground(new java.awt.Color(51, 255, 0));
         infoTextArea.setRows(5);
         infoTextArea.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
@@ -195,7 +204,9 @@ public class EncUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(infoTextArea);
 
         encryptprocessingtime.setBackground(new java.awt.Color(0, 0, 0));
+        encryptprocessingtime.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         encryptprocessingtime.setForeground(new java.awt.Color(0, 255, 0));
+        encryptprocessingtime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         encryptprocessingtime.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
         encryptprocessingtime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +214,7 @@ public class EncUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
         jLabel2.setText("Waktu (ms)");
 
@@ -216,15 +228,15 @@ public class EncUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(encryptPanelLayout.createSequentialGroup()
-                        .addComponent(encButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(encButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(decButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(fileTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(decButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 239, Short.MAX_VALUE))
+                    .addComponent(fileTextField))
+                .addGap(18, 18, 18)
                 .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, encryptPanelLayout.createSequentialGroup()
                 .addContainerGap()
@@ -243,28 +255,28 @@ public class EncUI extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(encryptPanelLayout.createSequentialGroup()
-                        .addComponent(fcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(encryptPanelLayout.createSequentialGroup()
                                 .addGap(9, 9, 9)
                                 .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(encButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(decButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(encButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(decButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(encryptPanelLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(encryptPanelLayout.createSequentialGroup()
                             .addGap(2, 2, 2)
                             .addComponent(fileNameLbl))
-                        .addComponent(fileTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
+                        .addComponent(fileTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)))
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addGap(16, 16, 16)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(encryptPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(encryptprocessingtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(encryptprocessingtime, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addContainerGap())
         );
@@ -273,11 +285,15 @@ public class EncUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(encryptPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(encryptPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(encryptPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(encryptPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
